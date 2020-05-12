@@ -5,13 +5,11 @@ script: make test
 matrix:
   include:
     - dist: xenial
-      compiler: gcc
-
-    - dist: xenial
-      compiler: clang
-
-    - dist: bionic
-      compiler: gcc
+      compiler:
+        - gcc
+        - clang
 
     - dist: bionic
-      compiler: clang
+      compiler:
+        - gcc
+        - clang
