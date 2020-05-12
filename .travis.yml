@@ -1,1 +1,17 @@
+language: c++
+
 script: make test
+
+matrix:
+  include:
+    - dist: xenial
+      compiler: gcc
+
+    - dist: xenial
+      compiler: clang
+
+    - dist: bionic
+      compiler: gcc
+
+    - dist: bionic
+      compiler: clang
